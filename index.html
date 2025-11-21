@@ -1,50 +1,86 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-	<meta charset="utf-8">
-	<title>The purrfect cat</title>
-	<link rel="stylesheet" href="index.css">
-    
+    <meta charset="utf-8">
+    <title>The Purrfect Cat</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
-	<h1>My beautiful Keira</h1>
-        <div class="galeries">
-            <figure>
-             <img src="images /keira.jpeg" alt="white cat with a toy looking at the camara">
-            </figure>
-            <figure>
-             <img src="images /Keira2.jpeg" alt="white cat with a toy looking at the camara opening her arms">
-            </figure>
-	<p>
-		Meet Keira, my British Longhair Princess Keira is an eight-month-old British Longhair cat with the softest white fur and dazzling blue eyes that can melt anyone’s heart. 
-        She’s gentle, curious, and full of charm — always ready to explore new corners of the house or take long naps in the sun.
-        Her playful personality and elegant appearance make her the true queen of our home. Through this page, I want to share a little piece of her world — 
-        her favorite moments, habits, and the love she brings every day.
-	</p>
+    <h1>My Beautiful Keira</h1>
+    <p class="subtitle">A fluffy princess with a heart full of tenderness</p>
 
-	<h2>Early Days and First Adventures</h2>
-	<p>
-	    When Keira first came home, she was a tiny, shy kitten who loved hiding under the bed. 
-        It didn’t take long for her curiosity to take over — she started exploring every room, sniffing every corner, and climbing onto places she shouldn’t. 
-        Her favorite adventure was chasing the reflection of light on the wall, which she thought was a mysterious moving toy.
-	</p>
-	<h2>Personality and Daily Routine</h2>
-	<p>
-		Keira is calm and sweet, but she also has a playful spirit. 
-        She wakes up early, stretches beside the window, and waits patiently for breakfast. 
-        Her afternoons are for playtime, usually chasing a feather toy or rolling on the floor with her favorite plush birth. 
-        In the evenings, she curls up beside me on the couch — her purring is the best soundtrack to end the day.
-    </p>
-	<h2>Favorite Toys and Moments</h2>
-	<p>
-		Keira loves soft toys, anything that jingles, and cardboard boxes (of course!). 
-        She also enjoys watching the world from the window, especially when birds visit the garden. 
-        Her most adorable habit is tilting her head when I talk to her, as if she truly understands every word. 
-        She’s more than a pet — she’s my little companion, my daily joy, and a fluffy source of happiness.
-</p>
+    <!-- Carousel Section -->
+    <div class="carousel-container">
+        <div class="carousel-track">
+            <figure>
+                <img src="images /Keira.jpeg" alt="White cat with a toy looking at the camera">
+                <figcaption>Keira posing with her favorite toy</figcaption>
+            </figure>
+            <figure>
+                <img src="images /Keira2.jpeg" alt="White cat openning her arms trying to hug">
+                <figcaption>hug time</figcaption>
+            </figure>
+            <figure>
+                <img src="images /Keira3.jpeg" alt="Keira sleeping peacefully">
+                <figcaption>Royal nap</figcaption>
+            </figure>
+            <figure>
+                <img src="images /Keira4.jpeg" alt="Keira watching the camera">
+                <figcaption>Shooting time</figcaption>
+            </figure>
+            <figure>
+                <img src="images /Keira5.jpeg" alt="Keira receiving love">
+                <figcaption>Playtime queen</figcaption>
+            </figure>
+            <figure>
+                <img src="images /Keira6.jpeg" alt="Keira fixing some birds">
+                <figcaption>Birdwatching time</figcaption>
+            </figure>
         </div>
-	</body>
 
+        <button class="carousel-btn prev">❮</button>
+        <button class="carousel-btn next">❯</button>
+    </div>
+
+    <!-- Content Sections -->
+    <h2>Early Days and First Adventures</h2>
+    <p>
+        Meet Keira, my British Longhair Princess! She arrived as a tiny, shy kitten who loved hiding under the bed. But curiosity quickly took over — she explored every room, sniffed every corner, and climbed anywhere she could.
+        Her favorite game was chasing reflections of light, convinced they were magical little creatures.
+    </p>
+
+    <h2>Personality and Daily Routine</h2>
+    <p>
+        Keira is gentle and sweet, but also playful. She wakes up early, stretches by the window, and waits for breakfast like the elegant queen she is.
+        Afternoon means playtime — feathers, jingling toys, and rolling on the floor. Evenings? She curls up beside me, purring like a tiny engine.
+    </p>
+
+    <h2>Favorite Toys and Moments</h2>
+    <p>
+        She loves soft toys, anything that jingles, and of course, cardboard boxes! One of her cutest habits is tilting her head when I talk to her, as if she's really trying to understand.
+        Keira is more than a pet — she's my companion, my joy, my fluffy piece of sunshine.
+    </p>
+
+    <!-- Carousel Script -->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const nextButton = document.querySelector('.next');
+        const prevButton = document.querySelector('.prev');
+        let index = 0;
+
+        function updateCarousel() {
+            track.style.transform = `translateX(-${index * 270}px)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (index < track.children.length - 1) index++;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (index > 0) index--;
+            updateCarousel();
+        });
+    </script>
+</body>
 </html>
