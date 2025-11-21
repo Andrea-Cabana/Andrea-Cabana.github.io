@@ -7,5 +7,5 @@ This site was created for the course _Méthode et Pratiques Numériques_.
 It presents information, resources, and course exercises.
 The code is organized into simple folders.
 I update and modify everything using Visual Studio Code.
-In my webpage, I decided to talk about my cats, and this latest version includes some improvements.
+In my webpage, I decided to talk about my cat, and this latest version includes some improvements.
 Suggestions and feedback are welcome.
